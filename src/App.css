@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
+body{
+    background-color: #F2F2F2;
+}
+.Navsection {
+    padding: 1rem 2rem;
+  }
+  
+  .components {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .navItems {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .login-btn, .signup-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .login-btn {
+    background-color: #E5EDF5;
+    border: 1px solid #333;
+  }
+  
+  .signup-btn {
+    background-color: #052a4c;
+    color: white;
+  }
+  
+  .login-btn:hover{
+    opacity: 0.8;
+    background-color: transparent;
+    
+  } 
+  .signup-btn:hover {
+    color: #052a4c;
+    background-color: transparent;
+  }
+  .navItems :hover{
+    cursor: pointer;
+  }
+
+
+  
+
+  /*login*/
+  .SignUpSection,
+  .loginSection {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+  }
+  
+  .authForm {
+    background: #f8f8f8;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .authForm h6 {
+    text-align: center;
+    color: #002140;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .role-select {
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .role-select option {
+    padding: 10px;
+  }
+  
+  .btnSubmit {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .btnSubmit button {
+    background-color: #002140;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  
+  .btnSubmit button:hover {
+    opacity: 0.9;
+  }
+  
+  input:focus,
+  select:focus {
+    outline: none;
+    border-color: #002140;
+  } 
+
+  /* About us */
+  .home-container {
+    padding: 2rem 4rem;
+    margin-top: 2rem;
+  }
+  
+  .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+  .text-content {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .text-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #002140;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .text-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4A4A4A;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .donate-btn, .signin-btn {
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .donate-btn {
+    background-color: #002140;
+    color: white;
+    border: none;
+  }
+  
+  .signin-btn {
+    background-color: transparent;
+    border: 1px solid #002140;
+    color: #002140;
+  }
+  
+  .donate-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .signin-btn:hover {
+    background-color: #E5EDF5;
+  }
+  
+  .image-content {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .content-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .text-content {
+      max-width: 100%;
+    }
+  
+    .cta-buttons {
+      justify-content: center;
+    }
+  
+    .image-content {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 1rem 2rem;
+    }
+  
+    .text-content h1 {
+      font-size: 2.5rem;
+    }
+  } 
+  /* secondsection */
+  .second-section {
+    padding: 4rem 2rem;
+    /* background-color: ; */
+  }
+  
+  /* About Section */
+  .about-section {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+  }
+  
+  .about-section h2 {
+    font-size: 2.5rem;
+    color: #002140;
+    margin-bottom: 2rem;
+  }
+  
+  .info-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .info-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .info-card h3 {
+    color: #002140;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .info-card p {
+    color: #4A4A4A;
+    line-height: 1.6;
+  }
+  
+  /* Team Section */
+  .team-section {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+  }
+  
+  .team-section h2 {
+    font-size: 2.5rem;
+    color: #002140;
+    margin-bottom: 2rem;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .team-member {
+    text-align: center;
+  }
+  
+  .member-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .team-member h4 {
+    color: #002140;
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-member p {
+    color: #4A4A4A;
+  }
+  
+  /* Partners Section */
+  /* .partners-section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .partners-section h2 {
+    font-size: 2.5rem;
+    color: #002140;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .partners-section h2 span {
+    color: #1890ff;
+  }
+  
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    align-items: center;
+  } */
+/*   
+  .partner-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+   */
+  /* .partner-logo img {
+    max-width: 120px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+  
+  .partner-logo:hover img {
+    filter: grayscale(0%);
+  }
+   */
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .info-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .info-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .partners-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .member-image {
+      width: 150px;
+      height: 150px;
+    }
+  } 
