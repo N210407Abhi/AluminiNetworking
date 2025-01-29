@@ -442,8 +442,8 @@ body{
   /* x */
   .close-btn {
     position: absolute;
-    top: 190px;
-    right: 480px;
+    top: 130px;
+    right: 490px;
     font-size: 1.2rem;
     cursor: pointer;
     background: transparent;
