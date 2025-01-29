@@ -1,16 +1,18 @@
-
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [userRole, setUserRole] = useState('');
+  const [isVisible, setIsVisible] = useState(true);
+
+  if (!isVisible) return null;
 
   return (
     <div className='loginSection'>
       <form className='authForm'>
+        <div className="close-btn" onClick={() => setIsVisible(false)}>X</div>
         <h6>Log in</h6>
-        
         <div className="form-group">
           <label>User Type</label>
           <select 
@@ -24,7 +26,6 @@ const Login = () => {
             <option value="alumni">Alumni</option>
           </select>
         </div>
-
         <div className="form-group">
           <label>Email</label>
           <input 
@@ -35,7 +36,6 @@ const Login = () => {
             placeholder='Enter your email' 
           />
         </div>
-
         <div className="form-group">
           <label>Password</label>
           <input 
@@ -46,12 +46,12 @@ const Login = () => {
             placeholder='Enter your password' 
           />
         </div>
-
         <div className="btnSubmit">
           <button type='submit'>Submit</button>
         </div>
       </form>
     </div>
-  )
-} 
+  );
+};
+
 export default Login;

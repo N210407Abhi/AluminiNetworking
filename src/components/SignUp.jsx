@@ -1,16 +1,18 @@
-
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [userRole, setUserRole] = useState('');
+  const [isVisible, setIsVisible] = useState(true); // Visibility state
+
+  if (!isVisible) return null; // If not visible, don't render the component
 
   return (
     <div className='SignUpSection'>
       <form className='authForm'>
+        <div className="close-btn" onClick={() => setIsVisible(false)}>X</div>
         <h6>Sign Up</h6>
-        
         <div className="form-group">
           <label>User Type</label>
           <select 
@@ -24,7 +26,6 @@ const SignUp = () => {
             <option value="alumni">Alumni</option>
           </select>
         </div>
-
         <div className="form-group">
           <label>Email</label>
           <input 
@@ -35,7 +36,6 @@ const SignUp = () => {
             placeholder='Enter your email' 
           />
         </div>
-
         <div className="form-group">
           <label>Password</label>
           <input 
@@ -46,12 +46,12 @@ const SignUp = () => {
             placeholder='Enter your password' 
           />
         </div>
-
         <div className="btnSubmit">
           <button type='submit'>Submit</button>
         </div>
       </form>
     </div>
-  )
-} 
+  );
+};
+
 export default SignUp;

@@ -429,3 +429,19 @@ body{
       height: 150px;
     }
   } 
+  /* x */
+  .close-btn {
+    position: absolute;
+    top: 190px;
+    right: 480px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: #333;
+    font-weight: bold;
+  }
+  .close-btn:hover {
+    color:#002140;
+  }
+  
