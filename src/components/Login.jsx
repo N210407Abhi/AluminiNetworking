@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
 
-const Login = () => {
+const Login = ({ isSignedUp, handleSignUpAlert }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [userRole, setUserRole] = useState('');
   const [isVisible, setIsVisible] = useState(true);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (isSignedUp) {
+      alert('Login successful!');
+    } else {
+      handleSignUpAlert();
+    }
+  };
+
   if (!isVisible) return null;
 
   return (
     <div className='loginSection'>
-      <form className='authForm'>
+      <form className='authForm' onSubmit={handleSubmit}>
         <div className="close-btn" onClick={() => setIsVisible(false)}>X</div>
         <h6>Log in</h6>
         <div className="form-group">

@@ -9,6 +9,7 @@ export const Landingpage = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [showSignUp, setShowSignUp] = useState(false);
   const [showMainBody, setShowMainBody] = useState(false);
+  const [isSignedUp, setIsSignedUp] = useState(false);
 
   const showLoginHandler = () => {
     setShowNavbar(true);
@@ -31,6 +32,15 @@ export const Landingpage = () => {
     setShowSignUp(false);
   };
 
+  const handleSignUpAlert = () => {
+    alert('Please sign up before logging in!');
+  };
+
+  const handleSignUpSuccess = () => {
+    setIsSignedUp(true);
+    alert('Sign up successful! You can now log in.');
+  };
+
   return (
     <div className='landingSection'>
       {showNavbar && (
@@ -40,8 +50,8 @@ export const Landingpage = () => {
           showAboutHandler={showAboutHandler}
         />
       )}
-      {showLogin && <Login />}
-      {showSignUp && <SignUp />}
+      {showLogin && <Login isSignedUp={isSignedUp} handleSignUpAlert={handleSignUpAlert} />}
+      {showSignUp && <SignUp onSignUpSuccess={handleSignUpSuccess} />}
       {showMainBody && <MainBody showLoginHandler={showLoginHandler} />}
     </div>
   );

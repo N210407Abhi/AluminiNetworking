@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 
-const SignUp = () => {
+const SignUp = ({ onSignUpSuccess }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [userRole, setUserRole] = useState('');
-  const [isVisible, setIsVisible] = useState(true); // Visibility state
+  const [isVisible, setIsVisible] = useState(true);
 
-  if (!isVisible) return null; // If not visible, don't render the component
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSignUpSuccess();
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null;
 
   return (
     <div className='SignUpSection'>
-      <form className='authForm'>
+      <form className='authForm' onSubmit={handleSubmit}>
         <div className="close-btn" onClick={() => setIsVisible(false)}>X</div>
         <h6>Sign Up</h6>
         <div className="form-group">
