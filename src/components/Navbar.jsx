@@ -1,14 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-export const Navbar = ({showLoginHandler,showSignUpHandler}) => {
+export const Navbar = ({ showLoginHandler, showSignUpHandler, showAboutHandler }) => {
   return (
     <div className='Navsection'>
       <div className="components">
         <div className='logo'>ALUMINI ASSOCIATION</div>
         <ul className='navItems'>
           <li>Home</li>
-           {/* <li><Link to='/aboutus'>About us</Link></li>  */}
-           <li>About us</li>
+          <li onClick={showAboutHandler}>About us</li>
           <li>Events</li>
           <li>Alumini</li>
           <li>Contact</li>
@@ -19,5 +17,5 @@ export const Navbar = ({showLoginHandler,showSignUpHandler}) => {
         </ul>
       </div>
     </div>
-  )
-} 
+  );
+};

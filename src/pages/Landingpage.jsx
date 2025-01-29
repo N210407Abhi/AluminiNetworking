@@ -1,39 +1,48 @@
-import React,{useState} from 'react'
-import { Navbar } from '../components/Navbar'
-import Login from '../components/Login'
-import SignUp from '../components/SignUp'
-import MainBody from '../components/MainBody'
+import React, { useState } from 'react';
+import { Navbar } from '../components/Navbar';
+import Login from '../components/Login';
+import SignUp from '../components/SignUp';
+import MainBody from '../components/MainBody';
 
 export const Landingpage = () => {
-  const[showLogin,setshowLogin] = useState(false)
-  const [showNavbar,setshowNavbar] = useState(true)
-  const [showSignUp,setshowSignUp] = useState(false)
-  // const [showMainbody,setshowMainbody] = useState(false)
-  const showLoginHandler =()=>{
-    setshowNavbar(true)
-    setshowLogin(true)
-    setshowSignUp(false)
-    setshowMainbody(false)
+  const [showLogin, setShowLogin] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [showSignUp, setShowSignUp] = useState(false);
+  const [showMainBody, setShowMainBody] = useState(false);
 
-}
-const showSignUpHandler = ()=>{
-  setshowLogin(false)
-  setshowNavbar(true)
-  setshowSignUp(true)
-  setshowMainbody(false)
-}
-// const showMainbodyhandler = ()=>{
-//   setshowMainbody(true)
-//   setshowNavbar(true)
-//   setshowLogin(false)
-//   setshowSignUp(false)
-// }
+  const showLoginHandler = () => {
+    setShowNavbar(true);
+    setShowLogin(true);
+    setShowSignUp(false);
+    setShowMainBody(false);
+  };
+
+  const showSignUpHandler = () => {
+    setShowLogin(false);
+    setShowNavbar(true);
+    setShowSignUp(true);
+    setShowMainBody(false);
+  };
+
+  const showAboutHandler = () => {
+    setShowMainBody(true);
+    setShowNavbar(true);
+    setShowLogin(false);
+    setShowSignUp(false);
+  };
+
   return (
     <div className='landingSection'>
-        {showNavbar && <Navbar showLoginHandler = {showLoginHandler} showSignUpHandler = {showSignUpHandler} />}
-        {showLogin && <Login/>}
-        {showSignUp && <SignUp/>}
-        <MainBody showLoginHandler={showLoginHandler}/>
+      {showNavbar && (
+        <Navbar
+          showLoginHandler={showLoginHandler}
+          showSignUpHandler={showSignUpHandler}
+          showAboutHandler={showAboutHandler}
+        />
+      )}
+      {showLogin && <Login />}
+      {showSignUp && <SignUp />}
+      {showMainBody && <MainBody showLoginHandler={showLoginHandler} />}
     </div>
-  )
-}
+  );
+};
